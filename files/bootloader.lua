@@ -1,8 +1,8 @@
 -- Setup global vars --
 
 local qos = {}
-_G.qos.osfolder = "/qwertios"
-_G.qos.oscode = _G.qos.osfolder.."/os"
+qos.osfolder = "/qwertios"
+qos.oscode = qos.osfolder.."/os"
 local monitor = peripheral.find("monitor", function(name, object) return object.isColour() end)
 qos.monitor = monitor
 qos.speakers = {peripheral.find("speaker")}
