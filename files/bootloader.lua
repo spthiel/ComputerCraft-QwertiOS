@@ -20,14 +20,15 @@ print("Global vars set")
 
 if fs.exists(_G.qos.oscode.."/qos.lua") then
 
-	print("Move: ".._G.qos.oscode.."/qos.lua".." -> ".._G.qos.oscode.."/qos")
-	fs.move(_G.qos.oscode.."/qos.lua",_G.qos.oscode.."/qos")
+	print("Move: ".._G.qos.oscode.."/qos.lua".." -> ".._G.qos.oscode.."/Qos")
+	fs.move(_G.qos.oscode.."/qos.lua",_G.qos.oscode.."/Qos")
 
 end
 
-print(qos.oscode.."/qos")
-os.loadAPI(qos.oscode.."/qos")
+print(qos.oscode.."/Qos")
+shell.run("cd /")
+os.loadAPI(qos.oscode.."/Qos")
 
-qos.foo("test")
+Qos.foo("test")
 
 -- End --
