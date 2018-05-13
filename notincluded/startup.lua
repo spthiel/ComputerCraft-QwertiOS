@@ -1,5 +1,6 @@
 _G.qos = {}
 _G.qos.osfolder = "/qwertios"
+_G.qos.oscode = _G.qos.osfolder.."/os"
 local programName = "github"
 local programCode = "Wj6Ftupr"
 
@@ -18,14 +19,16 @@ if fs.exists(programName) then
     fs.delete(programName)
 end
 
-if fs.exists(_G.qos.osfolder) then
-    fs.delete(_G.qos.osfolder)
+if fs.exists(_G.qos.oscode) then
+    fs.delete(_G.qos.oscode)
 end
-print("Move: ".."/"..repo.."/"..remotedir.." -> ".._G.qos.osfolder)
-fs.move("/"..repo.."/"..remotedir,_G.qos.osfolder)
+
+
+print("Move: ".."/"..repo.."/"..remotedir.." -> ".._G.qos.oscode)
+fs.move("/"..repo.."/"..remotedir,_G.qos.oscode)
 
 if fs.exists("/"..repo) then
     fs.delete(""..repo)
 end
 
-shell.run(_G.qos.osfolder.."/bootloader")
+shell.run(_G.qos.oscode.."/bootloader")
