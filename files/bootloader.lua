@@ -20,6 +20,7 @@ print("Global vars set")
 
 if fs.exists(_G.qos.oscode.."/qos.lua") then
 
+	print("Move: ".._G.qos.oscode.."/qos.lua".." -> ".._G.qos.oscode.."/qos")
 	fs.move(_G.qos.oscode.."/qos.lua",_G.qos.oscode.."/qos")
 
 end
