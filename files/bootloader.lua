@@ -7,6 +7,8 @@ local monitor = peripheral.find("monitor", function(name, object) return object.
 qos.monitor = monitor
 qos.speakers = {peripheral.find("speaker")}
 qos.userfolder = qos.osfolder.."/users"
+qos.defaultbgcolor = colors.black
+qos.defaultcolor = colors.yellow
 
 if not fs.exists(qos.userfolder) then
 	fs.makeDir(qos.userfolder)
@@ -31,4 +33,7 @@ os.loadAPI(qos.oscode.."/Qos")
 
 Qos.foo("test")
 
+term.flood = {	function (color) self.setBackgroundColor(color) self.clear() end }
+
+term.flood(colors.lime)
 -- End --

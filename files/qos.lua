@@ -1,3 +1,4 @@
-function foo(bar)
-	print(bar)
+
+function writeCenteredOnLine(y,str,color)
+
 end
