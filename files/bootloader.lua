@@ -19,6 +19,7 @@ print("Global vars set")
 -- Load api --
 
 print(qos.oscode.."/qos")
+print("test")
 os.loadAPI(qos.oscode.."/qos")
 
 qos.foo("test")
