@@ -1,6 +1,6 @@
 -- Setup global vars --
 
-local qos = {}
+local qos = _G.qos
 local monitor = peripheral.find("monitor", function(name, object) return object.isColour() end)
 qos.monitor = monitor
 qos.speakers = {peripheral.find("speaker")}
