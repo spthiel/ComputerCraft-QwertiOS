@@ -23,8 +23,6 @@ if fs.exists(_G.qos.oscode) then
 	print("oscode directory deleted")
     fs.delete(_G.qos.oscode)
 end
-print("terminate")
-sleep(10)
 
 print("Move: ".."/"..repo.."/"..remotedir.." -> ".._G.qos.oscode)
 fs.move("/"..repo.."/"..remotedir,_G.qos.oscode)

@@ -18,8 +18,13 @@ print("Global vars set")
 
 -- Load api --
 
+if fs.exists(_G.qos.oscode.."/qos.lua") then
+
+	fs.move(_G.qos.oscode.."/qos.lua",_G.qos.oscode.."/qos")
+
+end
+
 print(qos.oscode.."/qos")
-print("test")
 os.loadAPI(qos.oscode.."/qos")
 
 qos.foo("test")
